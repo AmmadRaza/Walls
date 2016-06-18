@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{1F5C5CE5-CDBE-A723-378E-6DB882A732EC}") = "Walls", "Assembly-CSharp.csproj", "{BC58CE89-019F-C53F-3F47-18EE39542B2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC58CE89-019F-C53F-3F47-18EE39542B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC58CE89-019F-C53F-3F47-18EE39542B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC58CE89-019F-C53F-3F47-18EE39542B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC58CE89-019F-C53F-3F47-18EE39542B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
