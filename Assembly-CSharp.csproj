@@ -48,6 +48,7 @@
      <Compile Include="Assets\Script\MenuHandler.cs" />
      <Compile Include="Assets\Script\WallController.cs" />
      <Compile Include="Assets\Script\WallsSpawner.cs" />
+     <Compile Include="Assets\Script\WaveSystem.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

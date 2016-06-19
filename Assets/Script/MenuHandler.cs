@@ -27,10 +27,16 @@ public class MenuHandler : MonoBehaviour {
 
 	public  void CheckForPause()
 	{
-
+		
 		isShowing = !isShowing;
 		OptionsCanvas.SetActive(isShowing);
 
+
+	}
+
+	public void ClosePanel()
+	{
+		OptionsCanvas.SetActive(!isShowing);
 
 	}
 }
