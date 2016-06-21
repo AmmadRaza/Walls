@@ -83,5 +83,4 @@ public class WaveSystem : MonoBehaviour
 	{
 		Application.LoadLevel(LoadScene);
 	}
-
 }
