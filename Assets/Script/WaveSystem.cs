@@ -8,54 +8,49 @@ public class WaveSystem : MonoBehaviour
 	public GameObject[] enemy; 
 
 	// How long between each spawn.
-	public float spawnTime = 10f;            
+	//public float spawnTime = 3f;            
 	public Transform[] spawnPoints;         
 
-	private float timer = 10;
+	private float timer = 4;
 
-//	public Text waveText;
 
 	int index = 0 ;
 
 	int wave = 0;
 
-	List <GameObject> EnemiesList = new List<GameObject>();
 
-	private int m_enemyCount = 30;
+	private int m_enemyCount = 1;
 
 	void Update()
 	{
+	//	Debug.Log(spawnTime + "spawTime");
+		Debug.Log(timer);
 
-
-	//	waveText.text = ("Wave " + wave + "/ 6  " + " Next Wave In  " + timer.ToString("0"));
 
 		timer -= Time.deltaTime;
 
 		if (timer <= 0 && wave < 6)
 		{
-			timer = 30;
+			timer = 2;
+			Spawn();
 
-			// In our first 2 waves spawn the default zombie , Changes the enemy every 2 waves.
+			wave++;
+
 			if (wave != 0 &&  wave % 2 == 0)
 			{
-				// Add's up the index of enemies in order to get a differnt enemy.
 				index ++ ;
 			}
 
-			Spawn();
 
-			// Adds up the number of the waves.
-			wave++;
 		}
 	}
 
 	void Spawn ()
 	{
 
-		// Spawn enemies, number of enemies is defined in the enemyCount Integer.
 		for (int i = 0; i<m_enemyCount;i++)
 		{
-			Invoke("EnemySpawner" , i + 2);
+			InvokeRepeating("EnemySpawner",0,5);
 		}
 	}
 
@@ -68,16 +63,9 @@ public class WaveSystem : MonoBehaviour
 		//Create the enemies at a random transform 
 		GameObject InstanceEnemies= Instantiate ( enemy[index] , spawnPoints[spawnPointIndex].position , spawnPoints[spawnPointIndex].rotation) as GameObject;
 
-		// Create enemies and add them to our list.
-		EnemiesList.Add(InstanceEnemies);
 
 	}
 
-	public void Remove (GameObject anything)
-	{
-		// Remove the enemy from the list when he is destroyed.
-		EnemiesList.Remove (anything);
-	}
 
 	public 	void LoseCondition (string LoadScene)
 	{

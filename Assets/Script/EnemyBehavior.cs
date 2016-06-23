@@ -6,12 +6,7 @@ public class EnemyBehavior : MonoBehaviour {
     public float speed;
     Vector3 tempPosition;
 
-    // Use this for initialization
-    void Start ()
-    {
-
-	}
-	
+  
 	// Update is called once per frame
 	void Update ()
     {
@@ -20,11 +15,5 @@ public class EnemyBehavior : MonoBehaviour {
         transform.position = tempPosition;
 	}
 
-    /*void OnCollisionEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Wall")
-        {
-            Destroy(gameObject);
-        }
-    }*/
+
 }
