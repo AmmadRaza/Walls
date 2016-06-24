@@ -61,9 +61,7 @@ public class WaveSystem : MonoBehaviour
 
 		// Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
 		//Create the enemies at a random transform 
-		GameObject InstanceEnemies= Instantiate ( enemy[index] , spawnPoints[spawnPointIndex].position , spawnPoints[spawnPointIndex].rotation) as GameObject;
-
-
+  		GameObject InstanceEnemies= Instantiate ( enemy[index] , spawnPoints[spawnPointIndex].position , spawnPoints[spawnPointIndex].rotation) as GameObject;
 	}
 
 
