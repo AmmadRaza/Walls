@@ -48,6 +48,7 @@
      <Compile Include="Assets\Script\EnemyBehavior.cs" />
      <Compile Include="Assets\Script\MenuHandler.cs" />
      <Compile Include="Assets\Script\SmashScript.cs" />
+     <Compile Include="Assets\Script\SpawnSystem.cs" />
      <Compile Include="Assets\Script\Test.cs" />
      <Compile Include="Assets\Script\WallController.cs" />
      <Compile Include="Assets\Script\WaveSystem.cs" />
