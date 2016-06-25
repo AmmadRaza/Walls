@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Test : MonoBehaviour
 {
-	public GameObject[] enemy; 
+	public List <GameObject> enemy = new List<GameObject>(); 
 
 	public Transform[] spawnPoints;         
 
@@ -17,7 +17,7 @@ public class Test : MonoBehaviour
 
 	List <GameObject> EnemiesList = new List<GameObject>();
 
-	private int enemyCount=2;
+	private int enemyCount=1;
 
 
 	void Update()
@@ -33,7 +33,7 @@ public class Test : MonoBehaviour
 				index ++ ;
 			}
 
-			EnemySpawner();
+			Spawn();
 
 			wave++;
 		}
@@ -45,7 +45,7 @@ public class Test : MonoBehaviour
 
 		for (int i = 0; i<enemyCount;i++)
 		{
-			Invoke("EnemySpawner" , i + 2);
+			InvokeRepeating("EnemySpawner" , 2  , 3);
 		}
 	}
 
