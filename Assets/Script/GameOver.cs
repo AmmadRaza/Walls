@@ -38,10 +38,7 @@ public class GameOver : MonoBehaviour {
 			GameOverText.color = Color.Lerp (GameOverText.color, GameOverTextColor, ColorChangeSpeed);
 		}
 
-		if (Input.GetKey (KeyCode.Space)) 
-		{
-			IsGameOver = true;
-		}
+
 		if (GameOverImage.color.a >= 0.6f) 
 		{
 			ScoreText.color = Color.Lerp (ScoreText.color, GameOverButtonsColor, ColorChangeSpeed);
