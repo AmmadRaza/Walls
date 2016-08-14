@@ -34,9 +34,8 @@ public class MenuHandler : MonoBehaviour {
 
 	}
 
-	public void ClosePanel()
+	public void TogglePanel (GameObject panel) 
 	{
-		OptionsCanvas.SetActive(!isShowing);
-
+		panel.SetActive (!panel.activeSelf);
 	}
 }
