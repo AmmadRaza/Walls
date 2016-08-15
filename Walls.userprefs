@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/MenuHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/SmashScript.cs">
     <Files>
-      <File FileName="Assets/Script/MenuHandler.cs" Line="38" Column="2" />
-      <File FileName="Assets/moveDownPowerUp.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MenuHandler.cs" Line="13" Column="21" />
+      <File FileName="Assets/moveDownPowerUp.cs" Line="14" Column="33" />
+      <File FileName="Assets/Script/WallController.cs" Line="20" Column="54" />
+      <File FileName="Assets/Script/SmashScript.cs" Line="29" Column="1" />
+      <File FileName="Assets/Script/WaveSystem.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -8,7 +8,10 @@ public class MenuHandler : MonoBehaviour
 	public GameObject OptionsCanvas;
 	private bool isShowing;
 
-
+	void Awake()
+	{
+		Time.timeScale = 1;
+	}
 
 	public void MainMenuButtonsHandler ( string ChangeMenuTo)
 	{
