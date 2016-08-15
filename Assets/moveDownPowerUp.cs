@@ -11,7 +11,7 @@ public class moveDownPowerUp : MonoBehaviour
 		transform.Translate(Vector3.down * speed *Time.deltaTime);
 	}
 
-	void OnCollisionEnter2D(Collision2D coll) 
+	void OnTriggerEnter(Collider coll) 
 	{
 		if (coll.gameObject.tag == "enemies")
 			Destroy(coll.gameObject);

@@ -25,27 +25,5 @@ public class WallController : MonoBehaviour
 		this.gameObject.GetComponent<Animator> ().SetBool ("WallsAnim", false);
 		m_button.GetComponent<SmashScript> ().SetSmasher (false);
 	}
-
-	void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.tag == "enemies" && this.gameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsTag ("Smasher").Equals (true)) 
-		{
-			speed = col.gameObject.GetComponent<EnemyBehavior> ().speed;
-			col.gameObject.GetComponent<EnemyBehavior> ().speed = 0;
-			col.gameObject.GetComponent<Animator> ().SetTrigger ("Smashed");
-		}
-		else 
-		{
-			speed = col.gameObject.GetComponent<EnemyBehavior> ().speed;
-			col.gameObject.GetComponent<EnemyBehavior> ().speed = 0;
-		}
-	}
-
-	void OnCollisionExit(Collision col)
-	{
-		if (col.gameObject.tag == "enemies") 
-		{
-			col.gameObject.GetComponent<EnemyBehavior> ().speed = 1.5f;
-		}
-	}
+		
 }

@@ -15,11 +15,25 @@ public class EnemyBehavior : MonoBehaviour
         tempPosition.y += speed * Time.deltaTime;
         transform.position = tempPosition;
 	}
-	void OnCollisionEnter(Collision col)
+	void OnTriggerEnter(Collider col)
 	{
-		if(col.gameObject.tag == "Wall" && col.gameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsTag ("Smasher").Equals (true))
+		if (col.gameObject.tag == "Wall" && col.gameObject.transform.parent.transform.parent.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsTag ("Smasher").Equals (true)) 
 		{
-			Invoke ("Destroyer", 0.5f);
+			speed = 0;
+			GetComponent<Animator> ().SetTrigger ("Smashed");
+			Invoke ("Destroyer", 1.7f);
+		}
+		else if(col.gameObject.tag == "Wall" && col.gameObject.transform.parent.transform.parent.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsTag ("Smasher").Equals (false)) 
+		{
+			speed = 0;
+		}
+	}
+
+	void OnTriggerExit(Collider col)
+	{
+		if (col.gameObject.tag == "Wall" && col.gameObject.transform.parent.transform.parent.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsTag ("Smasher").Equals (false) && GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsTag ("Smashed").Equals (false))
+		{
+			speed = 1;
 		}
 	}
 

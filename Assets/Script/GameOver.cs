@@ -53,7 +53,7 @@ public class GameOver : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D Col)
+	void OnTriggerEnter(Collider Col)
 	{
 		if (Col.gameObject.tag == "enemies") 
 		{

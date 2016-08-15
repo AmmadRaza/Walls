@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class MenuHandler : MonoBehaviour {
+public class MenuHandler : MonoBehaviour
+{
 
 	public GameObject OptionsCanvas;
 	private bool isShowing;
@@ -10,7 +12,7 @@ public class MenuHandler : MonoBehaviour {
 
 	public void MainMenuButtonsHandler ( string ChangeMenuTo)
 	{
-		Application.LoadLevel(ChangeMenuTo);
+		SceneManager.LoadScene(ChangeMenuTo);
 	}
 
 	public void QuitGame()

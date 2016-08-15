@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveSystem : MonoBehaviour
 {
@@ -67,6 +68,6 @@ public class WaveSystem : MonoBehaviour
 
 	public 	void LoseCondition (string LoadScene)
 	{
-		Application.LoadLevel(LoadScene);
+		SceneManager.LoadScene(LoadScene);
 	}
 }
